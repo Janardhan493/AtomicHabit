@@ -1,0 +1,277 @@
+/* General Body and Typography */
+body {
+  font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+  margin: 0;
+  background-color: #f8f9fa; /* Lighter background for a fresh feel */
+  color: #343a40; /* Darker text for better readability */
+  transition: background-color 0.4s ease, color 0.4s ease; /* Smoother transitions */
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Container Styling */
+.container {
+  max-width: 960px; /* Slightly wider for more content */
+  margin: 2.5rem auto; /* More vertical margin */
+  padding: 2rem; /* More internal padding */
+  background: #ffffff; /* Pure white background */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Softer, more pronounced shadow */
+  border-radius: 12px; /* More rounded corners */
+  animation: fadeIn 0.8s ease-out; /* Fade-in animation for container */
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading Style */
+h1 {
+  text-align: center;
+  color: #212529; /* Darker heading color */
+  margin-bottom: 2rem; /* More space below heading */
+  font-size: 2.5rem; /* Larger heading */
+  font-weight: 700; /* Bolder heading */
+  letter-spacing: -0.5px; /* Tighter letter spacing */
+}
+
+h1 .emoji {
+  font-size: 2.8rem; /* Slightly larger emoji */
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* Form Layout and Elements */
+form {
+  display: grid; /* Using CSS Grid for better form layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 1.2rem; /* Increased gap */
+  margin-bottom: 2rem; /* More space below form */
+  padding: 1.5rem;
+  background-color: #fefefe;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+input, button {
+  padding: 12px 15px; /* More padding for inputs and buttons */
+  border-radius: 6px; /* Slightly more rounded */
+  border: 1px solid #ced4da; /* Subtle border color */
+  font-size: 1rem; /* Standard font size */
+  transition: all 0.3s ease; /* Smooth transitions for hover/focus */
+}
+
+input:focus {
+  border-color: #80bdff; /* Blue border on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Glow effect on focus */
+  outline: none; /* Remove default outline */
+}
+
+button {
+  background: linear-gradient(to right, #007bff, #0056b3); /* Gradient background for buttons */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600; /* Bolder text on buttons */
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Subtle shadow for buttons */
+}
+
+button:hover {
+  background: linear-gradient(to right, #0056b3, #004085); /* Darker gradient on hover */
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); /* Enhanced shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: separate; /* Use separate for rounded borders on cells */
+  border-spacing: 0; /* Remove space between cells */
+  margin-top: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Lighter shadow for table */
+  border-radius: 8px; /* Rounded corners for the entire table */
+  overflow: hidden; /* Ensures rounded corners clip content */
+}
+
+thead {
+  background: linear-gradient(to right, #343a40, #495057); /* Darker gradient for header */
+  color: #fff;
+}
+
+th, td {
+  padding: 15px 20px; /* More padding */
+  text-align: left; /* Align text to the left for better readability */
+  border-bottom: 1px solid #e9ecef; /* Lighter separator */
+}
+
+th:first-child, td:first-child {
+  border-top-left-radius: 8px;
+}
+
+th:last-child, td:last-child {
+  border-top-right-radius: 8px;
+}
+
+tbody tr:last-child td {
+  border-bottom: none; /* No border for the last row */
+}
+
+tbody tr:hover {
+  background-color: #f1f3f5; /* Subtle highlight on row hover */
+}
+
+/* Completed Habit Styling */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5; /* Slightly more transparent */
+  font-style: italic; /* Italicize completed tasks */
+}
+
+/* Toast Notification */
+#toast {
+  position: fixed;
+  top: 25px; /* Slightly lower */
+  right: 25px; /* Slightly more right */
+  background: #333;
+  color: white;
+  padding: 12px 25px; /* More padding */
+  border-radius: 8px; /* More rounded */
+  display: none;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Shadow for toast */
+  z-index: 1000; /* Ensure it's on top */
+  animation: slideIn 0.5s forwards; /* Slide in animation */
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Toggle Switch (Dark Mode) */
+.toggle-container {
+  text-align: right;
+  margin: 1.5rem 0; /* More margin */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px; /* Space between switch and text */
+  font-weight: 500;
+  color: #495057;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px; /* Slightly wider */
+  height: 28px; /* Slightly taller */
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 28px; /* Fully rounded */
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px; /* Slightly larger handle */
+  width: 22px; /* Slightly larger handle */
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for slider handle */
+}
+
+input:checked + .slider {
+  background-color: #007bff; /* Blue for checked state */
+}
+
+input:checked + .slider:before {
+  transform: translateX(27px); /* Adjust translation */
+}
+
+/* Dark Mode Specific Styles */
+body.dark {
+  background-color: #1a1a2e; /* Deep dark blue background */
+  color: #e0e0e0; /* Lighter text for dark mode */
+}
+
+body.dark .container {
+  background: #2c2c4d; /* Darker container background */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* More pronounced shadow in dark mode */
+}
+
+body.dark h1 {
+  color: #ffffff; /* White heading in dark mode */
+}
+
+body.dark form {
+  background-color: #3a3a5e;
+  border-color: #4c4c7a;
+}
+
+body.dark input {
+  background-color: #3a3a5e;
+  color: #e0e0e0;
+  border-color: #4c4c7a;
+}
+
+body.dark input:focus {
+  border-color: #6a9edb;
+  box-shadow: 0 0 0 0.2rem rgba(106, 158, 219, 0.25);
+}
+
+body.dark button {
+  background: linear-gradient(to right, #6a9edb, #4a7bb7); /* Lighter blue gradient for dark mode buttons */
+  box-shadow: 0 4px 10px rgba(106, 158, 219, 0.2);
+}
+
+body.dark button:hover {
+  background: linear-gradient(to right, #4a7bb7, #3a6190);
+  box-shadow: 0 6px 15px rgba(106, 158, 219, 0.3);
+}
+
+body.dark table thead {
+  background: linear-gradient(to right, #4c4c7a, #5e5e8c); /* Darker header for dark mode table */
+  color: #ffffff;
+}
+
+body.dark th, body.dark td {
+  border-bottom-color: #3a3a5e; /* Darker border for table cells */
+}
+
+body.dark tbody tr:hover {
+  background-color: #35355c; /* Darker hover for table rows */
+}
+
+body.dark .toggle-container {
+  color: #c0c0c0;
+}
+
+body.dark .slider {
+  background-color: #555;
+}
+
+body.dark input:checked + .slider {
+  background-color: #6a9edb;
+}
+
+body.dark .slider:before {
+  background-color: #eee;
+}
+
+body.dark #toast {
+  background-color: #4c4c7a;
+  color: #ffffff;
+}

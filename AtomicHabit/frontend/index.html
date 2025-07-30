@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atomic Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>📅 Atomic Habit Tracker</h1>
+
+    <form id="habitForm">
+      <input type="text" id="title" placeholder="Habit Title" required>
+      <input type="text" id="description" placeholder="Description" required>
+      <input type="text" id="category" placeholder="Category (e.g., Health)">
+      <input type="date" id="reminderDate">
+      <button type="submit">Add Habit</button>
+    </form>
+
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="modeToggle">
+        <span class="slider round"></span>
+      </label>
+      <span>Dark Mode</span>
+    </div>
+
+    <div id="toast"></div>
+
+    <table id="habitTable">
+      <thead>
+        <tr>
+          <th>✅</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Reminder</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="habitList"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
