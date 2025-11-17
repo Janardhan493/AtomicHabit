@@ -43,8 +43,7 @@ cd AtomicHabit
 
 ---
 
-## 📸 Screenshots
-> Add screenshots of the UI here (optional).
+
 
 ---
 
